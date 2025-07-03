@@ -1,21 +1,16 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
     .navigation {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .navigation a {
-        margin: 0 15px;
-    }
-
     .navigation {
-    display: block;
+        display: block;
     }
 
-    .hamburger {
-        display: none;
+    .navigation ul {
+        display: flex;
     }
 
-    
 }

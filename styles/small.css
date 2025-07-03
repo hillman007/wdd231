@@ -7,11 +7,13 @@ header {
   display: none;
 }
 
+.navigation.show {
+  display: block;
+}
+
 .hamburger::before {
   content: "\2630";
 }
 .hamburger.show::before {
   content: "\00D7";
 }
-
-.navigation ul {display: flex;}
