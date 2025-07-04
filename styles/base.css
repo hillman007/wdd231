@@ -1,0 +1,58 @@
+/* ------------- COLOUR SCHEME ------------- */
+
+:root {
+    --primary-color: #003049;
+    --secondary-color: #669bbc;
+    --accent-color: #780000;
+    --primary-font-color: #fff;
+}
+
+/* ------------- SITE WIDE STYLES ------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Fredericka the Great", serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+}
+
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/* ------------- FOOTER ------------- */
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+  text-align: center;
+  padding: 1rem 10px;
+}
+
+.social {
+  margin-bottom: 1rem;
+}
+
+.social a {
+  margin: 0 0.5rem;
+}
