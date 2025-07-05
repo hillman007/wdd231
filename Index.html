@@ -6,7 +6,7 @@
     <title>Home Page | WDD 231 | Eric Hillman</title>
     <meta name="description" content="Welcome to the home page of WDD 231, Web Frontend Development.">
     <meta name="author" content="Eric Hillman">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/navigation.js" defer></script>
@@ -18,17 +18,17 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.svg" alt="site logo" width="1" height="1">
-        <span>The Site Name</span>
-        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
-        <nav id="nav-bar" class="navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">Final</a></li>
-            </ul>
-        </nav>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Eric Hillman</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
     </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
     <main>
         <h1>Home</h1>
         <section>
@@ -37,9 +37,9 @@
         </section>
         <section>
             <h2>Student Photo</h2>
-            <img src="images/profile.webp" alt="A photo of Eric Hillman" width="300" height="300">
+            <img src="images/profile.webp" alt="A photo of Eric Hillman" width="200">
         </section>
-        <section>
+        <section class="courses">
             <h2>Web Certificate Courses</h2>
         </section>
     </main>
@@ -49,8 +49,10 @@
             <a href="https://www.linkedin.com/in/eric-samuel-hillman/" target="_blank"><img src="images/linkedin_icon.svg" alt="LinkedIn" width="16" height="16"></a>
             <a href="https://www.facebook.com/eric.s.hillman" target="_blank"><img src="images/facebook_icon.svg" alt="Facebook" width="16" height="16"></a>
         </div>
+        <div class="copyright">
         <p>&copy; <span id="currentyear"></span></p>
         <p id="lastmodified"></p>
+        </div>
     </footer>
 </body>
 </html>

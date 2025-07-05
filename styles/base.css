@@ -10,9 +10,6 @@
 /* ------------- SITE WIDE STYLES ------------- */
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,39 +17,135 @@ h1, h2, h3 {
   font-family: "Fredericka the Great", serif;
 }
 
+/* ------------- HEADER ------------- */
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  align-items: end;
+  border-bottom: solid 1px #ddd;
+  column-gap: 8px;
 }
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+}
+
+header span {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* ------------- HAMBURGER ------------- */
+
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/* ------------- NAVIGATION ------------- */
 
 .navigation {
   display: none;
+  background-color: var(--primary-color);
 }
 
 .navigation.show {
   display: block;
 }
 
-.hamburger::before {
-  content: "\2630";
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.hamburger.show::before {
-  content: "\00D7";
+
+.navigation a {
+  display: block;
+  padding: .8rem 10px;
+  color: var(--primary-font-color);
+  text-decoration: none;
+  border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+  background-color: var(--secondary-color);
+}
+
+.navigation a:hover {
+  background-color: var(--accent-color);
 }
 
 /* ------------- FOOTER ------------- */
 
 footer {
-  background-color: var(--primary-color);
   color: var(--primary-font-color);
   text-align: center;
   padding: 1rem 10px;
 }
 
 .social {
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  background-color: white;
 }
 
 .social a {
-  margin: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
+
+.social img {
+  width: 25px;
+  height: 25px;
+}
+
+.social a:hover {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.copyright {
+  background-color: var(--accent-color);
+}
+
+/* ------------- MAIN CONTENT ------------- */
+
+main {
+  margin: 10px;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+section {
+    background-color: #ddd;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box; 
+  border: 20px solid #ddd; 
 }
