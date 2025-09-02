@@ -1,10 +1,10 @@
 /* ------------- COLOUR SCHEME ------------- */
 
 :root {
-    --primary-color: #003049;
-    --secondary-color: #669bbc;
-    --accent-color: #780000;
-    --primary-font-color: #fff;
+  --primary-color: #003049;
+  --secondary-color: #254355;
+  --accent-color: #780000;
+  --primary-font-color: #fff;
 }
 
 /* ------------- SITE WIDE STYLES ------------- */
@@ -13,7 +13,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2 {
   font-family: "Fredericka the Great", serif;
 }
 
@@ -126,6 +127,7 @@ footer {
 
 .copyright {
   background-color: var(--accent-color);
+  padding: 1px 0;
 }
 
 /* ------------- MAIN CONTENT ------------- */
@@ -135,17 +137,77 @@ main {
 }
 
 h2 {
-    text-align: center;
-    background-color: var(--secondary-color);
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-font-color);
+  font-weight: 300;
+  padding: 5px 0;
 }
 
 section {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 section img {
   width: 100%;
   height: auto;
-  box-sizing: border-box; 
-  border: 20px solid #ddd; 
+  box-sizing: border-box;
+  border: 20px solid #ddd;
+  border-radius: 2em;
+}
+
+h1 {
+  padding-left: 5px;
+}
+
+/* ------------- Course Content ------------- */
+
+/* Course Content */
+#coursesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.course-card,
+.filter-card {
+  padding: 1em;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+
+.course-card.completed {
+  background: #d4edda;
+  border: 2px solid #28a745;
+}
+
+.course-card.not-completed {
+  background: #f8d7da;
+  border: 2px solid #dc3545;
+}
+
+.filter-card {
+  background: var(--secondary-color);
+  border: 2px solid black;
+  color: var(--primary-font-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, border 0.3s;
+}
+
+.filter-card:hover,
+.filter-card:focus {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+#totalCredits {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 1em 0;
+  font-weight: bold;
 }

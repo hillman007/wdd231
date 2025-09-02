@@ -77,3 +77,40 @@ const courses = [
         completed: false
     }
 ]
+
+function renderCourses(courseList) {
+    const container = document.getElementById('coursesContainer');
+    container.innerHTML = '';
+
+    // Render filter buttons as cards
+    const filters = [
+        { id: 'allBtn', label: 'All Courses', filter: () => courses },
+        { id: 'wddBtn', label: 'WDD Courses', filter: () => courses.filter(course => course.subject === 'WDD') },
+        { id: 'cseBtn', label: 'CSE Courses', filter: () => courses.filter(course => course.subject === 'CSE') }
+    ];
+
+    filters.forEach(filter => {
+        const btn = document.createElement('button');
+        btn.id = filter.id;
+        btn.className = 'course-card filter-card';
+        btn.textContent = filter.label;
+        btn.addEventListener('click', () => renderCourses(filter.filter()));
+        container.appendChild(btn);
+    });
+
+    // Render course cards
+    courseList.forEach(course => {
+        const card = document.createElement('div');
+        card.className = 'course-card';
+        card.classList.add(course.completed ? 'completed' : 'not-completed');
+        card.innerHTML = `<h3>${course.subject} ${course.number}: ${course.title}</h3>`;
+        container.appendChild(card);
+    });
+
+    // Calculate total credits
+    const total = courseList.reduce((sum, course) => sum + course.credits, 0);
+    document.getElementById('totalCredits').textContent = `Total Credits: ${total}`;
+}
+
+// Initial render
+renderCourses(courses);
