@@ -1,0 +1,18 @@
+{
+    "family_name": "Hillman",
+    "move_in_date": "2023-09-15",
+    "number_of_people": 3,
+    "bishop_visit": true,
+    "family_members": [
+        {
+            "given_name": "Eric",
+            "gender": "male",
+            "date_of_birth": "1995-08-30"
+        },
+        {
+            "given_name": "Emma",
+            "gender": "female",
+            "date_of_birth": "1995-03-06"
+        }
+    ]
+}
