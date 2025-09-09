@@ -1,0 +1,72 @@
+[
+    {
+    "name": "Blue Sky Technologies",
+    "address": "123 Innovation Drive, Lethbridge, AB",
+    "phone": "403-555-1234",
+    "website": "https://blueskytech.ca",
+        "image": "blueskytech.png",
+        "membership_level": 3,
+        "description": "Leading provider of cloud solutions and IT consulting.",
+        "contact_email": "info@blueskytech.ca"
+    },
+    {
+        "name": "Prairie Printworks",
+        "address": "456 Main Street, Lethbridge, AB",
+        "phone": "403-555-5678",
+        "website": "https://prairieprintworks.com",
+        "image": "prairieprintworks.png",
+        "membership_level": 2,
+        "description": "Full-service print shop specializing in eco-friendly materials.",
+        "contact_email": "contact@prairieprintworks.com"
+    },
+    {
+        "name": "Green Fields Landscaping",
+        "address": "789 Garden Lane, Lethbridge, AB",
+        "phone": "403-555-9012",
+        "website": "https://greenfieldslandscaping.ca",
+        "image": "greenfields.png",
+        "membership_level": 1,
+        "description": "Residential and commercial landscaping services.",
+        "contact_email": "service@greenfieldslandscaping.ca"
+    },
+    {
+        "name": "Sunrise Bakery",
+        "address": "321 Sunrise Ave, Lethbridge, AB",
+        "phone": "403-555-3456",
+        "website": "https://sunrisebakery.ca",
+        "image": "sunrisebakery.png",
+        "membership_level": 2,
+        "description": "Family-owned bakery offering fresh bread and pastries daily.",
+        "contact_email": "orders@sunrisebakery.ca"
+    },
+    {
+        "name": "Mountain View Fitness",
+        "address": "654 Peak Road, Lethbridge, AB",
+        "phone": "403-555-7890",
+        "website": "https://mountainviewfitness.ca",
+        "image": "mountainviewfitness.png",
+        "membership_level": 3,
+        "description": "State-of-the-art gym and wellness center.",
+        "contact_email": "info@mountainviewfitness.ca"
+    },
+    {
+        "name": "Riverbend Books",
+        "address": "987 Riverbend Blvd, Lethbridge, AB",
+        "phone": "403-555-2345",
+        "website": "https://riverbendbooks.ca",
+        "image": "riverbendbooks.png",
+        "membership_level": 1,
+        "description": "Independent bookstore with a wide selection of local authors.",
+        "contact_email": "hello@riverbendbooks.ca"
+    },
+    {
+        "name": "Northern Lights Marketing",
+        "address": "159 Aurora St, Lethbridge, AB",
+        "phone": "403-555-6789",
+        "website": "https://northernlightsmarketing.ca",
+        "image": "northernlights.png",
+        "membership_level": 2,
+        "description": "Digital marketing agency specializing in small businesses.",
+        "contact_email": "team@northernlightsmarketing.ca"
+    }
+]
