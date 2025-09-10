@@ -64,6 +64,8 @@ header span {
 .navigation {
   display: none;
   background-color: var(--primary-color);
+  width: 80vw;
+  max-width: 440px;
 }
 
 .navigation.show {
@@ -74,6 +76,7 @@ header span {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .navigation a {
@@ -96,7 +99,9 @@ header span {
 
 footer {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 1fr;
+  /* Stack sections vertically on mobile */
+  gap: 1.5rem;
   color: var(--primary-font-color);
   background-color: var(--accent-color);
   text-align: center;
@@ -174,4 +179,39 @@ section img {
 
 h1 {
   padding-left: 5px;
+}
+
+/* Member Wrapper */
+
+.member-wrapper {
+  margin: 1rem;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.level-3 {
+  /* Gold */
+  box-shadow: 0 4px 16px 0 rgba(255, 215, 0, 0.5);
+}
+
+.level-2 {
+  /* Silver */
+  box-shadow: 0 4px 16px 0 rgba(192, 192, 192, 0.5);
+}
+
+.level-1 {
+  /* Member */
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
