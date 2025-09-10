@@ -1,9 +1,13 @@
 @media only screen and (min-width: 38rem) {
-    
-    header, main, nav, footer {
+
+    header,
+    main,
+    nav,
+    footer {
         max-width: 900px;
         margin: 0 auto;
     }
+
     header {
         grid-template-columns: 24px auto 280px;
     }
@@ -11,7 +15,7 @@
     .hamburger {
         display: none;
     }
-    
+
     .navigation {
         display: block;
         border-bottom: solid 1px #ddd;
@@ -26,17 +30,19 @@
     .navigation a {
         border: none;
     }
-   
+
     h1 {
         margin: 0;
         padding: 8px 0 8px 5px;
     }
+
     h2 {
         margin: 0;
     }
 
     footer {
-        grid-template-columns: 2fr 1fr 2fr; /* Horizontal layout for desktop */
+        grid-template-columns: 2fr 1fr 2fr;
+        /* Horizontal layout for desktop */
         gap: 0;
     }
 }
