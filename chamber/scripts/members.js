@@ -1,4 +1,4 @@
-const url = 'data/members.json';
+const url = 'https://hillman007.github.io/wdd231/chamber/data/members.json';
 
 const cards = document.getElementById('member-cards');
 
