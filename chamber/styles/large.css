@@ -32,8 +32,11 @@
     }
 
     h1 {
-        margin-bottom: 1.5rem;
         padding: 8px 0 8px 5px;
+    }
+
+    main button {
+        margin-bottom: 1.34rem;
     }
 
     footer {
