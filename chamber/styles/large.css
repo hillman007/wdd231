@@ -58,4 +58,35 @@
         flex-direction: column;
         justify-content: stretch;
     }
+
+    /* Index page responsive overrides */
+    .hero-text {
+        position: static;
+        padding: 1rem;
+        max-width: 100%;
+        background: rgba(0, 48, 73, 0.85);
+        margin-top: -60px;
+    }
+
+    .spotlight-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .weather-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        align-items: stretch;
+    }
+
+    .main-info-row section {
+        min-width: 0;
+    }
 }

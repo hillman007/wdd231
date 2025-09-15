@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village of Duchess Chamber of Commerce | Home</title>
+    <meta name="description"
+        content="Home page for the Village of Duchess Chamber of Commerce. Discover local businesses, events, and join our community.">
+    <meta name="author" content="Eric Hillman">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Village of Duchess Chamber of Commerce">
+    <meta property="og:description"
+        content="Home page for the Village of Duchess Chamber of Commerce. Discover local businesses, events, and join our community.">
+    <meta property="og:image" content="https://hillman007.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:url" content="https://hillman007.github.io/wdd231/chamber/index.html">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/shop.svg" alt="Site Logo" width="48" height="48">
+        <span>Village of Duchess Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Image -->
+        <section class="hero">
+            <img src="images/profile.webp" alt="Village of Duchess - Community" class="hero-img" width="100%"
+                height="auto">
+            <div class="hero-text">
+                <h1>Welcome to the Village of Duchess Chamber of Commerce</h1>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="main-info-row">
+            <!-- Current Events Section -->
+            <section id="events">
+                <h2>Current Events</h2>
+                <div class="events-list">
+                    <!-- Event items will be loaded here by JS -->
+                    <article>
+                        <h3>Business Networking Breakfast</h3>
+                        <p>Friday, September 19th, 8:00 AM<br>Community Hall</p>
+                    </article>
+                    <article>
+                        <h3>Fall Festival</h3>
+                        <p>Saturday, September 27th, 10:00 AM - 4:00 PM<br>Main Street</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Current Weather Section -->
+            <section id="weather-current">
+                <h2>Current Weather</h2>
+                <div class="weather-info">
+                    <p>Temperature: <span id="current-temp">--</span></p>
+                    <figure>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Weather Forecast Section -->
+            <section id="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <div class="forecast-list">
+                    <!-- JS will populate 3-day forecast here -->
+                    <div class="forecast-day" id="forecast-day-1"></div>
+                    <div class="forecast-day" id="forecast-day-2"></div>
+                    <div class="forecast-day" id="forecast-day-3"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Member Business Cards Section -->
+        <section id="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-cards"></div>
+        </section>
+    </main>
+    <footer>
+        <!-- Contact Information -->
+        <section class="footer-contact">
+            <p><strong>Village of Duchess Chamber of Commerce</strong> <br> Box 341, 103 2nd Street East <br> Duchess,
+                Alberta T0J 0Z0 <br> Phone: (403) 378-4452 <br> Email: info@duchesschamber.ca</p>
+        </section>
+
+        <!-- Social Media Links -->
+        <section>
+            <div class="social">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.svg" alt="YouTube" width="32" height="32">
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img src="images/twitter-x.svg" alt="X (Twitter)" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/in/eric-samuel-hillman/" target="_blank">
+                    <img src="images/linkedin_icon.svg" alt="LinkedIn logo" width="32" height="32">
+                </a>
+            </div>
+        </section>
+
+        <!-- Project & Copyright Info -->
+        <section class="footer-info">
+            <p>WDD231 Class Project <br> Eric Hillman <br> &copy; <span id="currentyear"></span> Village of Duchess
+                Chamber of Commerce <br> <span id="lastmodified"></span></p>
+        </section>
+    </footer>
+</body>
+
+</html>
