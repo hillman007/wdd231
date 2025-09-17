@@ -102,7 +102,7 @@ footer {
   background-color: var(--accent-color);
 }
 
-footer section {
+footer>div {
   min-width: 200px;
   margin: 0;
   padding: 0 1rem;
@@ -128,7 +128,7 @@ footer section {
   height: 66px;
 }
 
-footer section img,
+footer>div img,
 .social img {
   width: 40px;
   height: 40px;
@@ -191,7 +191,8 @@ main button:focus {
 }
 
 /* ------------- DIRECTORY LIST & GRID ------------- */
-.list {
+.list,
+.main-info-row {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -203,10 +204,6 @@ main button:focus {
   margin: 0;
   padding: 0.25rem;
   font-size: small;
-}
-
-.list section>* {
-  margin: 0 1rem;
 }
 
 .list section img {
@@ -360,11 +357,11 @@ figcaption {
   margin-bottom: 2rem;
 }
 
-.spotlight-cards {
+#spotlight-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
-  justify-content: center;
+  align-items: center;
 }
 
 .spotlight-card {

@@ -1,5 +1,3 @@
-// filepath: [OneDrive](http://_vscodecontentref_/1) - Grasslands Public Schools\Documents\Visual studio [weather.js](http://_vscodecontentref_/2)
-
 const apiKey = "1bc37bb707e73b8e0645aec83d3649ae";
 const lat = 50.728; // Duchess, Alberta latitude
 const lon = -111.904; // Duchess, Alberta longitude
@@ -47,9 +45,7 @@ async function getForecast() {
         // Pick the forecast closest to 12:00 for each day
         if (hour === 12 && lastDate !== date.toDateString()) {
             forecastDays[daysFound].innerHTML = `
-        <strong>${dayLabel}</strong><br>
-        <img src="https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" alt="${item.weather[0].description}">
-        <br>
+        <br><strong>${dayLabel}</strong><br>
         ${Math.round(item.main.temp)}°C, ${item.weather[0].description}
       `;
             lastDate = date.toDateString();

@@ -68,9 +68,11 @@
         margin-top: -60px;
     }
 
-    .spotlight-cards {
-        flex-direction: column;
-        gap: 1.5rem;
+    #spotlight-cards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2rem;
     }
 
     .weather-info {
@@ -80,7 +82,7 @@
 
     .main-info-row {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
         gap: 2rem;
         margin-bottom: 2rem;
         align-items: stretch;
