@@ -1,5 +1,6 @@
 @media only screen and (min-width: 730px) {
 
+    /* ----- Layout Containers ----- */
     header,
     main,
     nav,
@@ -12,6 +13,7 @@
         grid-template-columns: 24px auto 280px;
     }
 
+    /* ----- Navigation ----- */
     .hamburger {
         display: none;
     }
@@ -31,19 +33,23 @@
         border: none;
     }
 
+    /* ----- Headings ----- */
     h1 {
         padding: 8px 0 8px 5px;
     }
 
+    /* ----- Main Buttons ----- */
     main button {
         margin-bottom: 1.34rem;
     }
 
+    /* ----- Footer Layout ----- */
     footer {
         grid-template-columns: 2fr 1fr 2fr;
         gap: 0;
     }
 
+    /* ----- Directory Grid ----- */
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,7 +65,7 @@
         justify-content: stretch;
     }
 
-    /* Index page responsive overrides */
+    /* ----- Hero Section (Index) ----- */
     .hero-text {
         position: static;
         padding: 1rem;
@@ -68,6 +74,7 @@
         margin-top: -60px;
     }
 
+    /* ----- Spotlights (Index) ----- */
     #spotlight-cards {
         flex-direction: row;
         justify-content: center;
@@ -75,11 +82,13 @@
         gap: 2rem;
     }
 
+    /* ----- Weather Section (Index) ----- */
     .weather-info {
         flex-direction: column;
         gap: 1rem;
     }
 
+    /* ----- Main Info Row (Index) ----- */
     .main-info-row {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;

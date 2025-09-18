@@ -8,24 +8,17 @@ async function getMembersData() {
     displayMembers(data);
 }
 
-const displayMembers = (members) => {
-    cards.innerHTML = ''; // Clear existing content
+function displayMembers(members) {
+    cards.innerHTML = '';
     members.forEach(member => {
-
         const wrapper = document.createElement('div');
-        wrapper.className = `member-wrapper`;
+        wrapper.className = 'member-wrapper';
 
-        // Create a card for each member
-        let card = document.createElement('section');
-        let name = document.createElement('h2');
-        let logo = document.createElement('img');
-        // let address = document.createElement('p');
-        // let phone = document.createElement('p');
-        // let website = document.createElement('a');
-        let description = document.createElement('h3');
-        let contact = document.createElement('p');
-
-        // Set the content for each element
+        const card = document.createElement('section');
+        const name = document.createElement('h2');
+        const logo = document.createElement('img');
+        const description = document.createElement('h3');
+        const contact = document.createElement('p');
 
         logo.setAttribute('src', member.image);
         logo.setAttribute('alt', `Logo of ${member.name}`);
@@ -33,27 +26,15 @@ const displayMembers = (members) => {
         logo.setAttribute('width', '80');
         logo.setAttribute('height', '80');
 
-        name.textContent = `${member.name}`;
-        description.textContent = `${member.description}`;
-        // address.textContent = `Address: ${member.address}`;
-        // phone.textContent = `Phone: ${member.phone}`;
-
-        // // website.setAttribute('href', member.website);
-        // // website.setAttribute('target', '_blank');
-        // website.textContent = `URL: ${member.website}`;
+        name.textContent = member.name;
+        description.textContent = member.description;
         contact.innerHTML = `<strong>Email:</strong> ${member.contact_email}<br>
-                                <strong>Phone:</strong> ${member.phone}<br>
-                                <strong>URL:</strong> ${member.website}`;
+                             <strong>Phone:</strong> ${member.phone}<br>
+                             <strong>URL:</strong> ${member.website}`;
 
-
-
-        // Appeand Card
         card.appendChild(name);
         card.appendChild(description);
         card.appendChild(logo);
-        // card.appendChild(address);
-        // card.appendChild(phone);
-        // card.appendChild(website);
         card.appendChild(contact);
 
         wrapper.appendChild(card);
@@ -72,11 +53,10 @@ async function loadSpotlights() {
     const eligible = data.filter(m => m.membership_level === 2 || m.membership_level === 3);
 
     // Shuffle and pick 2 or 3
-    const count = Math.floor(Math.random() * 2) + 2; // 2 or 3
+    const count = Math.floor(Math.random() * 2) + 2;
     const shuffled = eligible.sort(() => 0.5 - Math.random());
     const spotlights = shuffled.slice(0, count);
 
-    // Clear container
     spotlightContainer.innerHTML = '';
 
     spotlights.forEach(member => {
@@ -101,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const memberCards = document.getElementById('member-cards');
 
     if (gridBtn && listBtn && memberCards) {
-        // Default to grid view
         memberCards.classList.add('grid');
 
         gridBtn.addEventListener('click', () => {
@@ -117,6 +96,5 @@ document.addEventListener('DOMContentLoaded', () => {
         getMembersData();
     }
 
-    // Always try to load spotlights if the container exists
     loadSpotlights();
 });
