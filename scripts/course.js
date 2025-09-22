@@ -104,12 +104,36 @@ function renderCourses(courseList) {
         card.className = 'course-card';
         card.classList.add(course.completed ? 'completed' : 'not-completed');
         card.innerHTML = `<h3>${course.subject} ${course.number}: ${course.title}</h3>`;
+        card.addEventListener('click', () => showCourseModal(course));
         container.appendChild(card);
     });
 
     // Calculate total credits
     const total = courseList.reduce((sum, course) => sum + course.credits, 0);
     document.getElementById('totalCredits').textContent = `Total Credits: ${total}`;
+}
+
+function showCourseModal(course) {
+    const dialog = document.getElementById('course-details');
+    dialog.innerHTML = `
+        <button id="close-modal" style="float:right;">&times;</button>
+        <h2>${course.subject} ${course.number}: ${course.title}</h2>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Description:</strong> ${course.description}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p><strong>Technology Stack:</strong> ${course.technology.join(', ')}</p>
+    `;
+    dialog.showModal();
+
+    // Close button
+    document.getElementById('close-modal').onclick = () => dialog.close();
+
+    // Close when clicking outside the modal
+    dialog.addEventListener('click', function handler(e) {
+        if (e.target === dialog) {
+            dialog.close();
+        }
+    }, { once: true });
 }
 
 // Initial render
