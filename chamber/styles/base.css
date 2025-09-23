@@ -568,6 +568,7 @@ form button[type="submit"] {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
 }
 
 .modal-content {
