@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village of Duchess Chamber of Commerce | Join</title>
+    <meta name="description"
+        content="Join the Village of Duchess Chamber of Commerce. Discover local businesses, events, and become a part of our community.">
+    <meta name="author" content="Eric Hillman">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Village of Duchess Chamber of Commerce | Join">
+    <meta property="og:description"
+        content="Join the Village of Duchess Chamber of Commerce. Discover local businesses, events, and become a part of our community.">
+    <meta property="og:image" content="https://hillman007.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:url" content="https://hillman007.github.io/wdd231/chamber/join.html">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/shop.svg" alt="Site Logo" width="48" height="48">
+        <span>Village of Duchess Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="join.html">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="join-section">
+            <h1>Chamber Membership Application</h1>
+            <div class="form-and-cards">
+                <form method="get" action="thankyou.html" autocomplete="on" id="membershipForm">
+                    <label class="required" for="firstName">
+                        First Name:
+                        <input type="text" name="firstName" id="firstName" required title="Enter your first name"
+                            autocomplete="given-name">
+                    </label>
+                    <label class="required" for="lastName">
+                        Last Name:
+                        <input type="text" name="lastName" id="lastName" required title="Enter your last name"
+                            autocomplete="family-name">
+                    </label>
+                    <label for="orgTitle">
+                        Organizational Title:
+                        <input type="text" name="orgTitle" id="orgTitle"
+                            title="Enter your title within the organization (letters, hyphens, spaces, min 7 chars)"
+                            autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                    </label>
+                    <label class="required" for="email">
+                        Email Address:
+                        <input type="email" name="email" id="email" required title="Enter your email address"
+                            autocomplete="email" placeholder="example@email.com">
+                    </label>
+                    <label class="required" for="mobile">
+                        Mobile Phone:
+                        <input type="tel" name="mobile" id="mobile" required title="Enter your mobile phone number"
+                            autocomplete="tel">
+                    </label>
+                    <label class="required" for="organization">
+                        Business/Organization Name:
+                        <input type="text" name="organization" id="organization" required
+                            title="Enter your business or organization name" autocomplete="organization">
+                    </label>
+                    <label class="required" for="membershipLevel">
+                        Membership Level:
+                        <select name="membershipLevel" id="membershipLevel" required title="Select a membership level">
+                            <option value="" disabled selected>Select a level</option>
+                            <option value="NP">NP Membership (Non-Profit, No Fee)</option>
+                            <option value="Bronze">Bronze Membership</option>
+                            <option value="Silver">Silver Membership</option>
+                            <option value="Gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    <label for="orgDescription">
+                        Business/Organization Description:
+                        <textarea name="orgDescription" id="orgDescription"
+                            title="Describe your business or organization" rows="4"></textarea>
+                    </label>
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <button type="submit">Submit Application</button>
+                </form>
+                <div class="membership-cards">
+                    <div class="membership-card" id="np-card">
+                        <h2>Non Profit Membership</h2>
+                        <p>No Fee</p>
+                        <a href="#np-modal" class="modal-link" data-modal="np-modal">See Benefits</a>
+                    </div>
+                    <div class="membership-card" id="bronze-card">
+                        <h2>Bronze Membership</h2>
+                        <p>Entry Level</p>
+                        <a href="#bronze-modal" class="modal-link" data-modal="bronze-modal">See Benefits</a>
+                    </div>
+                    <div class="membership-card" id="silver-card">
+                        <h2>Silver Membership</h2>
+                        <p>Enhanced Benefits</p>
+                        <a href="#silver-modal" class="modal-link" data-modal="silver-modal">See Benefits</a>
+                    </div>
+                    <div class="membership-card" id="gold-card">
+                        <h2>Gold Membership</h2>
+                        <p>Premium Benefits</p>
+                        <a href="#gold-modal" class="modal-link" data-modal="gold-modal">See Benefits</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Modals for membership benefits -->
+            <div id="np-modal" class="modal" tabindex="-1" aria-modal="true" role="dialog"
+                aria-labelledby="np-modal-title" style="display:none;">
+                <div class="modal-content">
+                    <h2 id="np-modal-title">Non Profit Membership Benefits</h2>
+                    <ul>
+                        <li>Access to all Chamber events</li>
+                        <li>Networking with local businesses</li>
+                        <li>Event discounts</li>
+                        <li>Non-profit spotlight opportunities</li>
+                    </ul>
+                    <button class="close-modal" data-modal="np-modal">Close</button>
+                </div>
+            </div>
+            <div id="bronze-modal" class="modal" tabindex="-1" aria-modal="true" role="dialog"
+                aria-labelledby="bronze-modal-title" style="display:none;">
+                <div class="modal-content">
+                    <h2 id="bronze-modal-title">Bronze Membership Benefits</h2>
+                    <ul>
+                        <li>All Non Profit benefits</li>
+                        <li>Business listing in directory</li>
+                        <li>Access to member-only events</li>
+                        <li>Basic advertising opportunities</li>
+                    </ul>
+                    <button class="close-modal" data-modal="bronze-modal">Close</button>
+                </div>
+            </div>
+            <div id="silver-modal" class="modal" tabindex="-1" aria-modal="true" role="dialog"
+                aria-labelledby="silver-modal-title" style="display:none;">
+                <div class="modal-content">
+                    <h2 id="silver-modal-title">Silver Membership Benefits</h2>
+                    <ul>
+                        <li>All Bronze benefits</li>
+                        <li>Spotlight position on home page</li>
+                        <li>Priority event registration</li>
+                        <li>Discounted training sessions</li>
+                    </ul>
+                    <button class="close-modal" data-modal="silver-modal">Close</button>
+                </div>
+            </div>
+            <div id="gold-modal" class="modal" tabindex="-1" aria-modal="true" role="dialog"
+                aria-labelledby="gold-modal-title" style="display:none;">
+                <div class="modal-content">
+                    <h2 id="gold-modal-title">Gold Membership Benefits</h2>
+                    <ul>
+                        <li>All Silver benefits</li>
+                        <li>Premium advertising (homepage banner)</li>
+                        <li>Exclusive event invitations</li>
+                        <li>Free booth at annual expo</li>
+                    </ul>
+                    <button class="close-modal" data-modal="gold-modal">Close</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contact">
+            <p>
+                <strong>Village of Duchess Chamber of Commerce</strong><br>
+                Box 341, 103 2nd Street East<br>
+                Duchess, Alberta T0J 0Z0<br>
+                Phone: (403) 378-4452<br>
+                Email: info@duchesschamber.ca
+            </p>
+        </div>
+        <div class="footer-social">
+            <div class="social">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.svg" alt="YouTube" width="32" height="32">
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img src="images/twitter-x.svg" alt="X (Twitter)" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/in/eric-samuel-hillman/" target="_blank">
+                    <img src="images/linkedin_icon.svg" alt="LinkedIn logo" width="32" height="32">
+                </a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>
+                WDD231 Class Project<br>
+                Eric Hillman<br>
+                &copy; <span id="currentyear"></span> Village of Duchess Chamber of Commerce<br>
+                <span id="lastmodified"></span>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

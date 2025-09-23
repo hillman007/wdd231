@@ -100,4 +100,31 @@
     .main-info-row section {
         min-width: 0;
     }
+
+    /* ----- Join Page Form and Cards Layout ----- */
+    .form-and-cards {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+    }
+
+    .form-and-cards form {
+    flex: 2 1 340px;
+    min-width: 320px;
+    max-width: 480px;
+    }
+
+    .membership-cards {
+    flex: 1 1 260px;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0;
+    gap: 2rem;
+    }
+
+    .membership-card {
+    min-width: 220px;
+    max-width: 340px;
+    margin: 0 auto;
+    }
 }

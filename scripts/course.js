@@ -116,7 +116,7 @@ function renderCourses(courseList) {
 function showCourseModal(course) {
     const dialog = document.getElementById('course-details');
     dialog.innerHTML = `
-        <button id="close-modal" style="float:right;">&times;</button>
+        <button id="close-modal" style="float:right;">❌</button>
         <h2>${course.subject} ${course.number}: ${course.title}</h2>
         <p><strong>Credits:</strong> ${course.credits}</p>
         <p><strong>Description:</strong> ${course.description}</p>
