@@ -18,8 +18,8 @@ function displayItems(places) {
             <figure>
                 <img src="${place.image}" alt="${place.name}" width="300" height="200">
             </figure>
+            <h2 class="discover-name">${place.name}</h2>
             <div class="discover-info">
-                <h2>${place.name}</h2>
                 <address class="discover-address">${place.address}</address>
                 <p class="discover-desc">${place.description}</p>
                 <button class="learn-more" type="button">Learn more</button>
