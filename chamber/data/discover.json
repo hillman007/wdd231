@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Duchess Community Hall",
+        "address": "103 2nd Street East, Duchess, AB",
+        "description": "A central hub for local events, meetings, and celebrations. The Community Hall is the heart of Duchess gatherings.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Duchess Golf Course",
+        "address": "Highway 873, Duchess, AB",
+        "description": "A scenic 9-hole golf course offering fun for all ages and skill levels, with beautiful prairie views.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Duchess Agricultural Grounds",
+        "address": "Main Street, Duchess, AB",
+        "description": "Home to rodeos, fairs, and agricultural exhibitions, showcasing the region's farming heritage.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Duchess School",
+        "address": "501 Louise Avenue, Duchess, AB",
+        "description": "A K-12 school known for its strong academics, sports, and community involvement.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Duchess Arena",
+        "address": "104 2nd Street West, Duchess, AB",
+        "description": "A modern ice arena hosting hockey, skating, and community events year-round.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Prairie Oasis Park",
+        "address": "Railway Avenue, Duchess, AB",
+        "description": "A beautiful park with playgrounds, picnic areas, and walking trails for families and visitors.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Duchess Museum",
+        "address": "200 Railway Avenue, Duchess, AB",
+        "description": "Explore the history of Duchess and area with exhibits, artifacts, and local stories.",
+        "image": "https://picsum.photos/300/200"
+    },
+    {
+        "name": "Local Businesses & Shops",
+        "address": "Downtown Duchess, AB",
+        "description": "A variety of local businesses, shops, and services that support the community and visitors.",
+        "image": "https://picsum.photos/300/200"
+    }
+]

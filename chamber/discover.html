@@ -4,23 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Village of Duchess Chamber of Commerce | Home</title>
+    <title>Village of Duchess Chamber of Commerce | Discover</title>
     <meta name="description"
-        content="Home page for the Village of Duchess Chamber of Commerce. Discover local businesses, events, and join our community.">
+        content="Discover the Village of Duchess area: attractions, features, and local highlights for prospective chamber members and visitors.">
     <meta name="author" content="Eric Hillman">
-
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Village of Duchess Chamber of Commerce">
+    <meta property="og:title" content="Village of Duchess Chamber of Commerce | Discover">
     <meta property="og:description"
-        content="Home page for the Village of Duchess Chamber of Commerce. Discover local businesses, events, and join our community.">
+        content="Discover the Village of Duchess area: attractions, features, and local highlights for prospective chamber members and visitors.">
     <meta property="og:image" content="https://hillman007.github.io/wdd231/chamber/images/profile.webp">
-    <meta property="og:url" content="https://hillman007.github.io/wdd231/chamber/index.html">
-
+    <meta property="og:url" content="https://hillman007.github.io/wdd231/chamber/discover.html">
     <!-- stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
-
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +25,10 @@
         href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-
     <!-- scripts -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/members.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </head>
 
 <body>
@@ -43,66 +38,24 @@
         <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
         <nav id="nav-bar" class="navigation">
             <ul>
-                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li class="current"><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Hero Image -->
-        <section class="hero">
-            <img src="images/profile.webp" alt="Village of Duchess - Community" class="hero-img">
-            <div class="hero-text">
-                <h1>Welcome to the Village of Duchess Chamber of Commerce</h1>
-                <a href="join.html" class="cta-button">Join the Chamber</a>
-            </div>
+        <aside class="visitor-info" id="visitorInfo" aria-live="polite">
+            <!-- Visitor message will be injected here by discover.js -->
+        </aside>
+        <section class="discover-hero">
+            <h1>Discover the Village of Duchess Area</h1>
+            <p>Explore the best features, attractions, and highlights of our vibrant community. Whether you're a
+                prospective chamber member or a visitor, you'll find something to love in Duchess!</p>
         </section>
-
-        <div class="main-info-row">
-            <!-- Current Events Section -->
-            <section id="events">
-                <h2>Current Events</h2>
-                <div class="events-list">
-                    <article>
-                        <h3>Business Networking Breakfast</h3>
-                        <p>Friday, September 19th, 8:00 AM<br>Community Hall</p>
-                    </article>
-                    <article>
-                        <h3>Fall Festival</h3>
-                        <p>Saturday, September 27th, 10:00 AM - 4:00 PM<br>Main Street</p>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Current Weather Section -->
-            <section id="weather-current">
-                <h2>Current Weather</h2>
-                <div class="weather-info">
-                    <p>Temperature: <span id="current-temp">--</span></p>
-                    <figure>
-                        <img id="weather-icon" src="images/profile.webp" alt="Weather Icon">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </section>
-
-            <!-- Weather Forecast Section -->
-            <section id="weather-forecast">
-                <h2>Weather Forecast</h2>
-                <div class="weather-info forecast-list">
-                    <div class="forecast-day" id="forecast-day-1"></div>
-                    <div class="forecast-day" id="forecast-day-2"></div>
-                    <div class="forecast-day" id="forecast-day-3"></div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Member Spotlights Section -->
-        <section id="spotlights">
-            <h2>Member Spotlights</h2>
-            <div id="spotlight-cards"></div>
+        <section class="discover-grid" id="discoverGrid">
+            <!-- Grid of 8 items will be loaded here by discover.js -->
         </section>
     </main>
     <footer>
