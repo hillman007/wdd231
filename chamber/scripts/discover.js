@@ -15,15 +15,13 @@ function displayItems(places) {
         const card = document.createElement('article');
         card.className = 'discover-card';
         card.innerHTML = `
-            <figure>
-                <img src="${place.image}" alt="${place.name}" width="300" height="200">
-            </figure>
-            <h2 class="discover-name">${place.name}</h2>
-            <div class="discover-info">
-                <address class="discover-address">${place.address}</address>
+                <figure>
+                    <img src="${place.image}" alt="${place.name}" width="300" height="200" loading="lazy">
+                </figure>
+                <h2 class="discover-name">${place.name}</h2>            
                 <p class="discover-desc">${place.description}</p>
+                <address class="discover-address">${place.address}</address>                
                 <button class="learn-more" type="button">Learn more</button>
-            </div>
         `;
         grid.appendChild(card);
     });

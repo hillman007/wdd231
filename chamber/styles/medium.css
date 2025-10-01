@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 641px) {
 
     /* ----- Layout Containers ----- */
     header,
@@ -128,8 +128,23 @@
         margin: 0 auto;
     }
 
-    #discoverGrid {
+    /* ----- Discovery Page ----- */
+    .discover-card {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "photograph name"
+            "photograph description"
+            "photograph location"
+            "photograph learnmore";
+        max-width: 650px;
+    }
+
+    .discover-card figure img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-card figure img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
     }
 }
