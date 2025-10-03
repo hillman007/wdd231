@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>Baking Made Simple: Interactive Recipe Finder — Site Plan</title>
+    <title>Eric's Recipe Box: Interactive Recipe Finder — Site Plan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,103 +11,110 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" href="styles/base.css">
 </head>
+
 <body>
     <header class="site-header">
-        <h1>Baking Made Simple: Interactive Recipe Finder — Site Plan</h1>
-        <p class="lede">A concise planning document outlining name, purpose, scenarios, color schema, typography, and wireframes.</p>
+        <h1>Eric's Recipe Box: Interactive Recipe Finder — Site Plan</h1>
+        <p class="lede">A concise planning document outlining name, purpose, scenarios, color schema, typography, and
+            wireframes.</p>
     </header>
 
     <main>
         <section id="site-name" class="card">
-        <h2>Site name</h2>
-        <p><strong>Name:</strong> Baking Made Simple</p>
-        <p><strong>Reason:</strong> The name signals approachability and clarity for beginners. It aligns with the site’s focus on simple, confidence-building recipes and interactive helpers (random recipe and “What Can I Bake?”) so visitors feel guided and not overwhelmed.</p>
-        <p class="note"><strong>Optional domain idea:</strong> bakingmadesimple.dev (example for branding; not required to be available).</p>
+            <h2>Site name</h2>
+            <p><strong>Name:</strong> Eric's Recipe Box</p>
+            <p><strong>Reason:</strong> The name feels friendly and easygoing—just like the site! It’s all about helping
+                beginners find simple, fun recipes and giving a little nudge with tools like the random recipe picker
+                and “What Can I Bake?” helper, so no one ever feels lost or stuck.</p>
         </section>
 
         <section id="site-purpose" class="card">
-        <h2>Site purpose</h2>
-        <p><strong>Purpose:</strong> Provide a beginner-friendly baking hub with practical, step-by-step content and two dynamic features:
-            a Random Recipe Generator powered by a public recipe API, and a “What Can I Bake?” tool that suggests recipes from a JSON dataset based on user-provided ingredients.</p>
-        <ul>
-            <li><strong>Information:</strong> Starter tips, essential tools, and simple baking guidance.</li>
-            <li><strong>Dynamic features:</strong> Random dessert recipes via API; ingredient-based suggestions via local JSON.</li>
-            <li><strong>Design goals:</strong> Valid HTML/CSS, accessibility, responsive layout, and clear UX.</li>
-        </ul>
+            <h2>Site purpose</h2>
+            <p><strong>Purpose:</strong> Provide a beginner-friendly baking hub with practical, step-by-step content and
+                two dynamic features:
+                a Random Recipe Generator powered by a public recipe API, and a “What Can I Bake?” tool that suggests
+                recipes from a JSON dataset based on user-provided ingredients.</p>
+            <ul>
+                <li><strong>Information:</strong> Starter tips, essential tools, and simple baking guidance.</li>
+                <li><strong>Dynamic features:</strong> Random dessert recipes via API; ingredient-based suggestions via local JSON.</li>
+                <li><strong>Design goals:</strong> Valid HTML/CSS, accessibility, responsive layout, and clear UX.</li>
+            </ul>
         </section>
 
         <section id="scenarios" class="card">
-        <h2>Scenarios</h2>
-        <ul class="scenarios">
-            <li><strong>Scenario 1:</strong> “I have flour, butter, and chocolate chips—what can I bake tonight?” The site suggests matching recipes using the JSON-based ingredient filter.</li>
-            <li><strong>Scenario 2:</strong> “I want to try something new—surprise me.” The site fetches and displays a random dessert recipe (title, image, instructions) from a public API.</li>
-        </ul>
+            <h2>Scenarios</h2>
+            <ul class="scenarios">
+                <li><strong>Scenario 1:</strong> “I have flour, butter, and chocolate chips—what can I bake tonight?”The site suggests matching recipes using the JSON-based ingredient filter.</li>
+                <li><strong>Scenario 2:</strong> “I want to try something new—surprise me.” The site fetches anddisplays a random dessert recipe (title, image, instructions) from a public API.</li>
+            </ul>
         </section>
 
         <section id="color-schema" class="card">
-        <h2>Color schema</h2>
-        <div class="swatches">
-            <div class="swatch swatch-sealbrown">
-            <span class="swatch-name">Seal Brown</span>
-            <span class="swatch-hex">#63310D</span>
-            <span class="swatch-use">Headings, primary accents, buttons</span>
+            <h2>Color schema</h2>
+            <div class="swatches">
+                <div class="swatch swatch-sealbrown">
+                    <span class="swatch-name">Seal Brown</span>
+                    <span class="swatch-hex">#63310D</span>
+                    <span class="swatch-use">Headings, primary accents, buttons</span>
+                </div>
+                <div class="swatch swatch-cream">
+                    <span class="swatch-name">Warm Cream</span>
+                    <span class="swatch-hex">#FFF8E6</span>
+                    <span class="swatch-use">Page background, cards</span>
+                </div>
+                <div class="swatch swatch-charcoal">
+                    <span class="swatch-name">Charcoal Text</span>
+                    <span class="swatch-hex">#2F2F2F</span>
+                    <span class="swatch-use">Body text for readable contrast</span>
+                </div>
             </div>
-            <div class="swatch swatch-cream">
-            <span class="swatch-name">Warm Cream</span>
-            <span class="swatch-hex">#FFF8E6</span>
-            <span class="swatch-use">Page background, cards</span>
-            </div>
-            <div class="swatch swatch-charcoal">
-            <span class="swatch-name">Charcoal Text</span>
-            <span class="swatch-hex">#2F2F2F</span>
-            <span class="swatch-use">Body text for readable contrast</span>
-            </div>
-        </div>
-        <p class="note">This document exclusively uses these colors in headings, backgrounds, text, and accents.</p>
         </section>
 
         <section id="typography" class="card">
-        <h2>Typography</h2>
-        <ul>
-            <li><strong>Fredericka the Great (700):</strong> Applied to major headings (h1–h2) for a friendly, classic tone.</li>
-            <li><strong>Roboto (400, 600):</strong> Applied to body text, lists, and labels for clean readability and accessible line height.</li>
-        </ul>
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Fredericka the Great (700):</strong> Applied to major headings (h1–h2) for a friendly,
+                    classic tone.</li>
+                <li><strong>Roboto (400, 600):</strong> Applied to body text, lists, and labels for clean readability
+                    and accessible line height.</li>
+            </ul>
 
-        <div class="type-examples">
-            <h3 class="type-heading">Sample heading — Fredericka the Great 700</h3>
-            <p class="type-body">Sample body text — Roboto 400. This paragraph demonstrates the body font and contrast against the Warm Cream background.</p>
-            <p class="type-body strong">Sample emphasized label — Roboto 600. Used for list labels and UI affordances.</p>
-        </div>
+            <div class="type-examples">
+                <h3 class="type-heading">Sample heading — Fredericka the Great 700</h3>
+                <p class="type-body">Sample body text — Roboto 400. This paragraph demonstrates the body font and
+                    contrast against the Warm Cream background.</p>
+                <p class="type-body strong">Sample emphasized label — Roboto 600. Used for list labels and UI
+                    affordances.</p>
+            </div>
         </section>
 
         <section id="wireframes" class="card">
-        <h2>Wireframe sketches</h2>
+            <h2>Wireframe sketches</h2>
 
-        <div class="wireframe-grid">
-            <figure class="wireframe">
-            <figcaption>Mobile home page wireframe</figcaption>
-                <img src="images/finalsite_mobile.png" alt="wireframe sketch of mobile home page">
-            </figure>
+            <div class="wireframe-grid">
+                <figure class="wireframe">
+                    <figcaption>Mobile home page wireframe</figcaption>
+                    <img src="images/finalsite_mobile.png" alt="wireframe sketch of mobile home page">
+                </figure>
 
-            <figure class="wireframe">
-            <figcaption>Desktop home page wireframe</figcaption>
-                <img src="images/finalsite_desktop.png" alt="wireframe sketch of desktop home page">
-            </figure>
-        </div>
-        <p class="note">These are schematic layouts only; actual content will be inserted during build.</p>
+                <figure class="wireframe">
+                    <figcaption>Desktop home page wireframe</figcaption>
+                    <img src="images/finalsite_desktop.png" alt="wireframe sketch of desktop home page">
+                </figure>
+            </div>
         </section>
 
         <section id="accessibility" class="card">
-        <h2>Accessibility and UX targets</h2>
-        <ul>
-            <li><strong>Contrast:</strong> Dark charcoal text on warm cream background meets readability targets.</li>
-            <li><strong>Structure:</strong> Semantic headings and landmark regions (header, main, footer).</li>
-            <li><strong>Controls:</strong> Clear buttons/links with focus styles and descriptive labels.</li>
-            <li><strong>Responsive:</strong> Readable on mobile-first, scales gracefully to desktop.</li>
-        </ul>
+            <h2>Accessibility and UX targets</h2>
+            <ul>
+                <li><strong>Contrast:</strong> Dark charcoal text on warm cream background meets readability targets.</li>
+                <li><strong>Structure:</strong> Semantic headings and landmark regions (header, main, footer).</li>
+                <li><strong>Controls:</strong> Clear buttons/links with focus styles and descriptive labels.</li>
+                <li><strong>Responsive:</strong> Readable on mobile-first, scales to desktop.</li>
+            </ul>
         </section>
     </main>
 
@@ -114,4 +122,5 @@
         <p>Prepared for WDD231 — Individual Project Site Plan.</p>
     </footer>
 </body>
+
 </html>
