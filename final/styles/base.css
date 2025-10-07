@@ -171,15 +171,3 @@ strong {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin: 0 auto;
 }
-
-/* Responsive */
-@media (min-width: 900px) {
-  .swatches {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .wireframe-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
