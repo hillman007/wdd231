@@ -1,13 +1,9 @@
 :root {
   --seal-brown: #63310D;
-  /* headings, accents */
   --cream: #FFF8E6;
-  /* backgrounds, cards */
   --charcoal: #2F2F2F;
-  /* body text */
 }
 
-/* Base */
 * {
   box-sizing: border-box;
 }
@@ -21,11 +17,10 @@ body {
   line-height: 1.6;
 }
 
-/* Headings use Fredericka the Great */
 h1,
 h2,
 h3 {
-  font-family: "Fredericka the Great", Georgia, "Times New Roman", serif;
+  font-family: "Fredericka the Great", Georgia, serif;
   color: var(--seal-brown);
   margin: 0 0 0.5rem;
 }
@@ -36,12 +31,10 @@ h3 {
   margin: 1rem 0 0.5rem;
 }
 
-/* Layout */
 .site-header,
 .site-footer {
   padding: 1rem 1.25rem;
   background: #fbeed6;
-  /* a lighter cream tint within schema vibe */
   border-bottom: 4px solid var(--seal-brown);
 }
 
@@ -56,7 +49,6 @@ main {
   padding: 1.25rem;
 }
 
-/* Cards */
 .card {
   background: var(--cream);
   border: 2px solid var(--seal-brown);
@@ -70,7 +62,6 @@ main {
   font-size: 1rem;
 }
 
-/* Lists and labels */
 ul {
   padding-left: 1.25rem;
 }
@@ -95,9 +86,6 @@ strong {
 
 .swatch {
   max-width: 100%;
-}
-
-.swatch {
   display: grid;
   grid-template-columns: 1fr 100px 1fr;
   align-items: center;
@@ -133,16 +121,12 @@ strong {
 }
 
 /* Wireframes */
-
-
 .wireframe figcaption {
-
   font-weight: 600;
   color: var(--seal-brown);
   margin-bottom: 0.5rem;
 }
 
-/* Wireframe images */
 .wireframe-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -171,3 +155,236 @@ strong {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin: 0 auto;
 }
+
+/* Hero Section Styles */
+.hero {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.hero-img-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(99, 49, 13, 0.10);
+}
+
+.hero-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85) contrast(1.05);
+}
+
+.hero-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 248, 230, 0.55);
+  color: var(--seal-brown);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-banner h2 {
+  font-family: "Fredericka the Great", Georgia, serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--seal-brown);
+  text-shadow: 0 2px 8px rgba(99, 49, 13, 0.10);
+}
+
+.hero-banner p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+/* Hamburger Nav Styles */
+.main-nav {
+  position: relative;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+.hamburger {
+  width: 28px;
+  height: 3px;
+  background: var(--seal-brown);
+  display: block;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background: var(--seal-brown);
+  transition: transform 0.2s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  background: var(--cream);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  box-shadow: 0 4px 24px rgba(99, 49, 13, 0.08);
+  z-index: 100;
+}
+
+.nav-list.open {
+  display: flex;
+}
+
+.nav-list li {
+  border-bottom: 1px solid #e5d3b3;
+}
+
+.nav-list li:last-child {
+  border-bottom: none;
+}
+
+.nav-list a {
+  display: block;
+  padding: 1em 2em;
+  color: var(--seal-brown);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  background: #fbeed6;
+}
+
+/* Eric's Favorites grid and cards */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.favorite-card {
+  background: var(--cream);
+  border: 2px solid var(--seal-brown);
+  border-radius: 10px;
+  box-shadow: 0 2px 0 var(--seal-brown);
+  padding: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-align: center;
+}
+
+.favorite-card:hover,
+.favorite-card:focus {
+  box-shadow: 0 6px 16px rgba(99, 49, 13, 0.15);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.favorite-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+/* Modal content scrollable and responsive */
+.modal-content {
+  background: var(--cream);
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 90vw;
+  width: 100%;
+  min-width: 260px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(99, 49, 13, 0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--seal-brown);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--seal-brown);
+  color: var(--cream);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.25em;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #4a230a;
+  outline: none;
+}
+
+/* Theme Variables & Base Styles */

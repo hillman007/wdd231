@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>What Can I Bake? | Eric's Recipe Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/ingredients.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>What Can I Bake?</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="ingredients.html">What Can I Bake?</a></li>
+                <li><a href="favorites.html">Eric's Favorites</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Find Recipes by Ingredients</h2>
+            <form id="ingredient-form">
+                <label for="ingredients">Enter ingredients (comma separated):</label>
+                <input type="text" id="ingredients" name="ingredients" required>
+                <button type="submit" class="btn">Find Recipes</button>
+            </form>
+            <div id="ingredient-results"></div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 Eric's Recipe Box. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
