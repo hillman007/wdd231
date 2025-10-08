@@ -5,17 +5,29 @@
     <meta charset="utf-8">
     <title>Eric's Recipe Box: Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Home page for Eric's Recipe Box. Discover delicious recipes, baking tips, and join our community.">
+    <meta name="author" content="Eric Hillman">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Eric's Recipe Box: Home">
+    <meta property="og:description"
+        content="Home page for Eric's Recipe Box. Discover delicious recipes, baking tips, and join our community.">
+    <meta property="og:image" content="https://hillman007.github.io/wdd231/final/images/finalsite_desktop.png">
+    <meta property="og:url" content="https://hillman007.github.io/wdd231/final/index.html">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet">
     <link rel="icon" href="../favicon.ico">
+    <!-- stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
-
+    <!-- scripts -->
     <script src="scripts/random.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
@@ -86,7 +98,13 @@
         </section>
     </main>
     <footer class="site-footer">
-        <p>&copy; 2025 Eric's Recipe Box. All rights reserved.</p>
+        <div class="footer-info">
+            <p>
+                Eric Hillman<br>
+                &copy; <span id="currentyear"></span> Eric's Recipe Box<br>
+                <span id="lastmodified"></span>
+            </p>
+        </div>
     </footer>
 </body>
 

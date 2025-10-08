@@ -3,24 +3,41 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Eric's Favorites | Eric's Recipe Box</title>
+    <title>Eric's Recipe Box: Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Favorites page for Eric's Recipe Box. Discover delicious recipes, baking tips, and join our community.">
+    <meta name="author" content="Eric Hillman">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Eric's Recipe Box: Favorites">
+    <meta property="og:description"
+        content="Favorites page for Eric's Recipe Box. Discover delicious recipes, baking tips, and join our community.">
+    <meta property="og:image" content="https://hillman007.github.io/wdd231/final/images/finalsite_desktop.png">
+    <meta property="og:url" content="https://hillman007.github.io/wdd231/final/favorites.html">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet">
     <link rel="icon" href="../favicon.ico">
+    <!-- stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+    <!-- scripts -->
     <script src="scripts/favorites.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
     <header class="site-header">
         <h1>Eric's Favorites</h1>
-        <nav>
-            <ul>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-list">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="ingredients.html">What Can I Bake?</a></li>
                 <li><a href="favorites.html">Eric's Favorites</a></li>
@@ -42,7 +59,13 @@
         </div>
     </main>
     <footer class="site-footer">
-        <p>&copy; 2025 Eric's Recipe Box. All rights reserved.</p>
+        <div class="footer-info">
+            <p>
+                Eric Hillman<br>
+                &copy; <span id="currentyear"></span> Eric's Recipe Box<br>
+                <span id="lastmodified"></span>
+            </p>
+        </div>
     </footer>
 </body>
 
