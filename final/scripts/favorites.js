@@ -34,12 +34,25 @@ async function getRandomDesserts(count = 6) {
 }
 
 function renderCards(desserts) {
-    grid.innerHTML = desserts.map((d, i) => `
-    <div class="card favorite-card" data-index="${i}" tabindex="0">
-      <img src="${d.img}" alt="${d.name}" />
-      <h3>${d.name}</h3>
-    </div>
-  `).join('');
+    grid.innerHTML = '';
+    desserts.forEach((d, i) => {
+        const card = document.createElement('div');
+        card.className = 'card favorite-card';
+        card.setAttribute('data-index', i);
+        card.setAttribute('tabindex', '0');
+
+        const img = document.createElement('img');
+        img.src = d.img;
+        img.alt = d.name;
+        img.loading = 'lazy';
+
+        const h3 = document.createElement('h3');
+        h3.textContent = d.name;
+
+        card.appendChild(img);
+        card.appendChild(h3);
+        grid.appendChild(card);
+    });
 }
 
 let dessertsData = [];
@@ -57,6 +70,8 @@ grid.addEventListener('click', (e) => {
     modalName.textContent = dessert.name;
     modalInstructions.textContent = dessert.instructions;
     modal.classList.add('show');
+    // Save last viewed favorite to localStorage
+    localStorage.setItem('lastFavorite', JSON.stringify(dessert));
 });
 
 closeBtn.addEventListener('click', () => {

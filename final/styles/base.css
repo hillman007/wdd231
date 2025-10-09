@@ -43,6 +43,11 @@ h3 {
   border-bottom: none;
 }
 
+footer a {
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -290,7 +295,12 @@ strong {
 
 .nav-list a:hover,
 .nav-list a:focus {
-  background: #fbeed6;
+  background: #FFD700;
+  border-radius: 20px;
+}
+
+.nav-list li.current a {
+  color: var(--charcoal);
 }
 
 /* Eric's Favorites grid and cards */
@@ -385,4 +395,8 @@ strong {
 .btn:focus {
   background: #4a230a;
   outline: none;
+}
+
+.btn#open-random-modal {
+  margin-top: 1em;
 }

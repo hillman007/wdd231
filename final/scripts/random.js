@@ -19,11 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const detailsRes = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${randomRecipe.idMeal}`);
             const detailsData = await detailsRes.json();
             const recipe = detailsData.meals[0];
-            resultDiv.innerHTML = `
-                <h3>${recipe.strMeal}</h3>
-                <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}" style="max-width:300px; border-radius:8px;">
-                <p><strong>Instructions:</strong> ${recipe.strInstructions}</p>
-            `;
+            resultDiv.innerHTML = '';
+            const h3 = document.createElement('h3');
+            h3.textContent = recipe.strMeal;
+            const img = document.createElement('img');
+            img.src = recipe.strMealThumb;
+            img.alt = recipe.strMeal;
+            img.loading = 'lazy';
+            const instructions = document.createElement('p');
+            instructions.innerHTML = `<strong>Instructions:</strong> ${recipe.strInstructions}`;
+            resultDiv.appendChild(h3);
+            resultDiv.appendChild(img);
+            resultDiv.appendChild(instructions);
         } catch (err) {
             resultDiv.innerHTML = '<p>Could not fetch recipe. Please try again.</p>';
         }

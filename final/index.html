@@ -1,9 +1,19 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>Eric's Recipe Box: Interactive Recipe Finder — Site Plan</title>
+    <title>Eric's Recipe Box: Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Home page for Eric's Recipe Box. Discover delicious recipes, baking tips, and join our community.">
+    <meta name="author" content="Eric Hillman">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Eric's Recipe Box: Home">
+    <meta property="og:description"
+        content="Home page for Eric's Recipe Box. Discover delicious recipes, baking tips, and join our community.">
+    <meta property="og:image" content="https://hillman007.github.io/wdd231/final/images/finalsite_desktop.png">
+    <meta property="og:url" content="https://hillman007.github.io/wdd231/final/index.html">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,104 +21,94 @@
         href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Merienda:wght@300..900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet">
     <link rel="icon" href="../favicon.ico">
+    <!-- stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+    <!-- scripts -->
+    <script src="scripts/random.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
+
 <body>
     <header class="site-header">
-        <h1>Eric's Recipe Box: Interactive Recipe Finder — Site Plan</h1>
-        <p class="lede">A concise planning document outlining name, purpose, scenarios, color schema, typography, and
-            wireframes.</p>
+        <h1>Eric's Recipe Box</h1>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-list">
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="ingredients.html">What Can I Bake?</a></li>
+                <li><a href="favorites.html">Eric's Favorites</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id="site-name" class="card">
-            <h2>Site name</h2>
-            <p><strong>Name:</strong> Eric's Recipe Box</p>
-            <p><strong>Reason:</strong> The name feels friendly and easygoing—just like the site! It’s all about helping
-                beginners find simple, fun recipes and giving a little nudge with tools like the random recipe picker
-                and “What Can I Bake?” helper, so no one ever feels lost or stuck.</p>
-        </section>
-        <section id="site-purpose" class="card">
-            <h2>Site purpose</h2>
-            <p><strong>Purpose:</strong> Provide a beginner-friendly baking hub with practical, step-by-step content and
-                two dynamic features:
-                a Random Recipe Generator powered by a public recipe API, and a “What Can I Bake?” tool that suggests
-                recipes from a JSON dataset based on user-provided ingredients.</p>
-            <ul>
-                <li><strong>Information:</strong> Starter tips, essential tools, and simple baking guidance.</li>
-                <li><strong>Dynamic features:</strong> Random dessert recipes via API; ingredient-based suggestions via local JSON.</li>
-                <li><strong>Design goals:</strong> Valid HTML/CSS, accessibility, responsive layout, and clear UX.</li>
-            </ul>
-        </section>
-        <section id="scenarios" class="card">
-            <h2>Scenarios</h2>
-            <ul class="scenarios">
-                <li><strong>Scenario 1:</strong> “I have flour, butter, and chocolate chips—what can I bake tonight?”The site suggests matching recipes using the JSON-based ingredient filter.</li>
-                <li><strong>Scenario 2:</strong> “I want to try something new—surprise me.” The site fetches anddisplays a random dessert recipe (title, image, instructions) from a public API.</li>
-            </ul>
-        </section>
-        <section id="color-schema" class="card">
-            <h2>Color schema</h2>
-            <div class="swatches">
-                <div class="swatch swatch-sealbrown">
-                    <span class="swatch-name">Seal Brown</span>
-                    <span class="swatch-hex">#63310D</span>
-                    <span class="swatch-use">Headings, primary accents, buttons</span>
-                </div>
-                <div class="swatch swatch-cream">
-                    <span class="swatch-name">Warm Cream</span>
-                    <span class="swatch-hex">#FFF8E6</span>
-                    <span class="swatch-use">Page background, cards</span>
-                </div>
-                <div class="swatch swatch-charcoal">
-                    <span class="swatch-name">Charcoal Text</span>
-                    <span class="swatch-hex">#2F2F2F</span>
-                    <span class="swatch-use">Body text for readable contrast</span>
+        <section class="hero">
+            <div class="hero-img-container">
+                <img src="images/hero_image.webp" alt="Baking hero image" class="hero-img" loading="lazy">
+                <div class="hero-banner">
+                    <h2>Welcome to Eric's Recipe Box</h2>
+                    <p>Discover, bake, and enjoy delicious desserts!</p>
                 </div>
             </div>
         </section>
-        <section id="typography" class="card">
-            <h2>Typography</h2>
+        <section class="card">
+            <h2>Welcome!</h2>
+            <p>Find simple, fun recipes and get inspired to bake. Try our random recipe generator or discover what you
+                can bake with ingredients you have at home!</p>
             <ul>
-                <li><strong>Fredericka the Great (700):</strong> Applied to major headings (h1–h2) for a friendly,
-                    classic tone.</li>
-                <li><strong>Roboto (400, 600):</strong> Applied to body text, lists, and labels for clean readability
-                    and accessible line height.</li>
+                <li><strong>Random Recipe:</strong> Get a surprise dessert recipe from a public API.</li>
+                <li><strong>What Can I Bake?:</strong> Enter your ingredients and get matching recipes from our local
+                    collection.</li>
+                <li><strong>Eric's Favorites:</strong> Browse through a curated list of Eric's favorite dessert recipes.
+                </li>
             </ul>
-            <div class="type-examples">
-                <h3 class="type-heading">Sample heading — Fredericka the Great 700</h3>
-                <p class="type-body">Sample body text — Roboto 400. This paragraph demonstrates the body font and
-                    contrast against the Warm Cream background.</p>
-                <p class="type-body strong">Sample emphasized label — Roboto 600. Used for list labels and UI
-                    affordances.</p>
-            </div>
+            <button id="open-random-modal" class="btn">Get Random Dessert</button>
         </section>
-        <section id="wireframes" class="card">
-            <h2>Wireframe sketches</h2>
-            <div class="wireframe-grid">
-                <figure class="wireframe">
-                    <figcaption>Mobile home page wireframe</figcaption>
-                    <img src="images/finalsite_mobile.png" alt="wireframe sketch of mobile home page">
-                </figure>
-
-                <figure class="wireframe">
-                    <figcaption>Desktop home page wireframe</figcaption>
-                    <img src="images/finalsite_desktop.png" alt="wireframe sketch of desktop home page">
-                </figure>
+        <!-- Random Dessert Modal -->
+        <div id="random-modal" class="modal">
+            <div class="modal-content">
+                <button id="close-random-modal" class="modal-close">&times;</button>
+                <h2>Random Dessert</h2>
+                <div id="modal-recipe-result">
+                    <p>Loading...</p>
+                </div>
             </div>
-        </section>
-        <section id="accessibility" class="card">
-            <h2>Accessibility and UX targets</h2>
+        </div>
+        <section class="card">
+            <h2>Starter Tips</h2>
             <ul>
-                <li><strong>Contrast:</strong> Dark charcoal text on warm cream background meets readability targets.</li>
-                <li><strong>Structure:</strong> Semantic headings and landmark regions (header, main, footer).</li>
-                <li><strong>Controls:</strong> Clear buttons/links with focus styles and descriptive labels.</li>
-                <li><strong>Responsive:</strong> Readable on mobile-first, scales to desktop.</li>
+                <li>Read the recipe all the way through before starting.</li>
+                <li>Measure ingredients accurately for best results.</li>
+                <li>Preheat your oven and prepare pans in advance.</li>
+                <li>Use room temperature ingredients unless otherwise specified.</li>
+                <li>Clean as you go to keep your workspace organized.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Essential Tools</h2>
+            <ul>
+                <li>Mixing bowls</li>
+                <li>Measuring cups and spoons</li>
+                <li>Whisk and spatula</li>
+                <li>Baking pans and sheets</li>
+                <li>Oven thermometer</li>
             </ul>
         </section>
     </main>
     <footer class="site-footer">
-        <p>Prepared for WDD231 — Individual Project Site Plan.</p>
+        <div class="footer-info">
+            <p>
+                Eric Hillman<br>
+                &copy; <span id="currentyear"></span> Eric's Recipe Box<br>
+                <span id="lastmodified"></span><br>
+                <a href="attributions.html">Attributions</a>
+            </p>
+        </div>
     </footer>
 </body>
+
 </html>

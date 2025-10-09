@@ -17,13 +17,26 @@ document.getElementById('ingredient-form').addEventListener('submit', async (e) 
         if (matches.length === 0) {
             resultDiv.innerHTML = '<p>No matching recipes found.</p>';
         } else {
-            resultDiv.innerHTML = matches.map(r => `
-                <div class="card">
-                    <h3>${r.name}</h3>
-                    <p><strong>Ingredients:</strong> ${r.ingredients.join(', ')}</p>
-                    <p><strong>Instructions:</strong> ${r.instructions}</p>
-                </div>
-            `).join('');
+            resultDiv.innerHTML = '';
+            matches.forEach(r => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                const h3 = document.createElement('h3');
+                h3.textContent = r.name;
+                const img = document.createElement('img');
+                img.src = r.image;
+                img.alt = r.name;
+                img.loading = 'lazy';
+                const ingredients = document.createElement('p');
+                ingredients.innerHTML = `<strong>Ingredients:</strong> ${r.ingredients.join(', ')}`;
+                const instructions = document.createElement('p');
+                instructions.innerHTML = `<strong>Instructions:</strong> ${r.instructions}`;
+                card.appendChild(h3);
+                card.appendChild(img);
+                card.appendChild(ingredients);
+                card.appendChild(instructions);
+                resultDiv.appendChild(card);
+            });
         }
     } catch (err) {
         resultDiv.innerHTML = '<p>Error loading recipes.</p>';
